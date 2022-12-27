@@ -34,3 +34,6 @@ application.properties
 
 ### VS Code ###
 .vscode/
+
+## 구글 ##
+application-oauth.properties

@@ -149,7 +149,7 @@ public class PostService {
         List<PostReadResponseDto> postReadResponseDtoList = new ArrayList<>();
 
         if(postList.isEmpty()){
-            return null;
+            return new ResponseEntity<>(new MsgResponseDto("게시글이 없습니다"), HttpStatus.OK);
         }
         for(Post post : postList){
             PostReadResponseDto postReadResponseDto = new PostReadResponseDto(post);

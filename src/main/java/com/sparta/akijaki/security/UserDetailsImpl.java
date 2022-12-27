@@ -1,23 +1,29 @@
 package com.sparta.akijaki.security;
 
+
 import com.sparta.akijaki.entity.User;
+import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
 
 import java.util.ArrayList;
 import java.util.Collection;
 
+@Getter
+
 public class UserDetailsImpl implements UserDetails {
     private final User user;
+
 
     public UserDetailsImpl(User user) {
         this.user = user;
     }
-
     //질문!!!!!!!!!!!!!!!!!!!
-    public org.springframework.security.core.userdetails.User getUser() {
-        return getUser();
+    public User getUser(){
+        return user;
     }
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -30,6 +36,7 @@ public class UserDetailsImpl implements UserDetails {
 //
         return authorities;
     }
+
 
     @Override
     public String getPassword() {
@@ -60,4 +67,6 @@ public class UserDetailsImpl implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+
 }
