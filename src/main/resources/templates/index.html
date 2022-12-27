@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HELLO OAuth</title>
+
+</head>
+
+<body>
+<fieldset>
+    <label>로그인</label> <br>
+    <div id="googleLoginBtn" style="cursor: pointer">
+        <img id="googleLoginImg" src="./images/btn_google_signin_light_pressed_web.png">
+    </div>
+</fieldset>
+</body>
+
+<script>
+    const onClickGoogleLogin = (e) => {
+        window.location.replace("redirect_uri=http://localhost:8080/login/google/auth")
+    }
+
+    const googleLoginBtn = document.getElementById("googleLoginBtn");
+    googleLoginBtn.addEventListener("click", onClickGoogleLogin);
+
+</script>
+</html>

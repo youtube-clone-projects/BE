@@ -22,8 +22,8 @@ public class WebConfig implements WebMvcConfigurer {
                 .exposedHeaders(JwtUtil.AUTHORIZATION_HEADER);
     }
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
+//    @Bean
+//    public PasswordEncoder passwordEncoder() {
+//        return new BCryptPasswordEncoder();
+//    }
 }
