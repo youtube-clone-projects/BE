@@ -13,8 +13,8 @@
 
 
 
-
-## 🔧API명세서 [LINK](https://www.notion.so/a0d99bd0325446828610f938bbf0e9ef?v=52a6abf20fc843a3a3cf7131737d08ac)🔧
+## ➡️5조notion[LINK](https://www.notion.so/5-04cc05359fd4423fbf6555ca7f71aa6d)
+## ➡️API명세서 [LINK](https://www.notion.so/a0d99bd0325446828610f938bbf0e9ef?v=52a6abf20fc843a3a3cf7131737d08ac)
 
 ##  📍 기술스택
 💚 BE
