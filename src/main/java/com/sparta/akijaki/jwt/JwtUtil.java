@@ -69,7 +69,7 @@ public class JwtUtil {
                 .map(GrantedAuthority::getAuthority)
                 .collect(Collectors.joining(","));
 
-        return BEARER_PREFIX +
+        return
                 Jwts.builder()
                         .setSubject(authentication.getName())
                         .claim(AUTHORIZATION_KEY, authorities)
