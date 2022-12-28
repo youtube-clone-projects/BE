@@ -36,6 +36,7 @@ dependencies {
     //mysql 의존성
     implementation 'mysql:mysql-connector-java'
 
+    //SWAGGER 의존성
     implementation 'io.springfox:springfox-boot-starter:3.0.0'
 
     //AWS에 접근하기 위한 의존성 추가
