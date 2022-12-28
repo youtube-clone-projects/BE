@@ -44,10 +44,10 @@ public class PostController {
     @PostMapping("/posts")
     @ApiOperation(value = "게시글 작성")
     public PostResponseDto createPost(@RequestParam("title") String title, @RequestParam("content") String content,
-                                            @RequestParam("category") String category, @RequestPart(value = "file",required = false) List<MultipartFile> multipartFiles,
-                                            HttpServletRequest request)  {
+                                            @RequestParam("category") String category, @RequestPart(value = "image",required = false) List<MultipartFile> multipartFiles,
+                                            @RequestPart(value = "video",required = false) List<MultipartFile> multipartList, HttpServletRequest request)  {
         String imageFile = awsS3Service.uploadFile(multipartFiles).get(0);
-        String videoFile = awsS3Service.uploadFile(multipartFiles).get(0);
+        String videoFile = awsS3Service.uploadFile(multipartList).get(0);
         return postService.createPost(title, content, category, videoFile, imageFile,request);
     }
 
@@ -70,10 +70,10 @@ public class PostController {
     @PutMapping("/posts/{postId}")
     @ApiOperation(value = "게시글 수정")
     public PostResponseDto updatePost(@PathVariable Long postId ,@RequestParam("title") String title, @RequestParam("content") String content,
-                                             @RequestParam("category") String category,@RequestPart(value = "file",required = false) List<MultipartFile> multipartFiles,
-                                            HttpServletRequest request) {
+                                             @RequestParam("category") String category,@RequestPart(value = "image",required = false) List<MultipartFile> multipartFiles,
+                                             @RequestPart(value = "video",required = false) List<MultipartFile> multipartList, HttpServletRequest request) {
         String imageFile = awsS3Service.uploadFile(multipartFiles).get(0);
-        String videoFile = awsS3Service.uploadFile(multipartFiles).get(0);
+        String videoFile = awsS3Service.uploadFile(multipartList).get(0);
         return postService.updatePost(postId, title, content, category,videoFile, imageFile,request);
     }
 
