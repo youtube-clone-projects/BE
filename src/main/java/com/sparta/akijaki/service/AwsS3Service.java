@@ -42,8 +42,10 @@ public class AwsS3Service {
             } catch (IOException e) {
                     throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "파일 업로드에 실패했습니다.");
             }
-            String imgUrl = amazonS3.getUrl(bucket, fileName).toString();
-            fileNameList.add(imgUrl);
+            String imageFile = amazonS3.getUrl(bucket, fileName).toString();
+//            String videoFile = amazonS3.getUrl(bucket, fileName).toString();
+            fileNameList.add(imageFile);
+//            fileNameList.add(videoFile);
         } );
         return  fileNameList;
     }
