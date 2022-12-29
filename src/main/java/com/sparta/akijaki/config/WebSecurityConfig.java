@@ -58,6 +58,8 @@ public class WebSecurityConfig{
                 .antMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
 
                 .anyRequest().authenticated()
+                .and()
+                .cors()
                 .and().addFilterBefore(new JwtAuthFilter(jwtUtil), UsernamePasswordAuthenticationFilter.class);
 
         // 401 Error 처리, 인증과정에서 실패할 시 처리
