@@ -1,7 +1,7 @@
 package com.sparta.akijaki.service;
 
 import com.sparta.akijaki.dto.CommentResponseDto;
-import com.sparta.akijaki.dto.MsgResponseDto;
+import com.sparta.akijaki.dto.CompleteResponseDto;
 import com.sparta.akijaki.dto.PostResponseDto;
 import com.sparta.akijaki.entity.Comment;
 import com.sparta.akijaki.entity.Post;
@@ -30,7 +30,7 @@ public class MyPageService {
 
 
         if (posts.isEmpty()) {
-            return new ResponseEntity<>(new MsgResponseDto("작성한 게시글이 없습니다"), HttpStatus.OK);
+            return new ResponseEntity<>(new CompleteResponseDto("작성한 게시글이 없습니다"), HttpStatus.OK);
 
         }
         for (Post post : posts) {
@@ -48,7 +48,7 @@ public class MyPageService {
         List<CommentResponseDto> commentResponseDtoList = new ArrayList<>();
 
         if(commentList.isEmpty()){
-            return new ResponseEntity<>(new MsgResponseDto("작성한 댓글이 없습니다"),HttpStatus.OK);
+            return new ResponseEntity<>(new CompleteResponseDto("작성한 댓글이 없습니다"),HttpStatus.OK);
         }
         for(Comment comment : commentList){
             CommentResponseDto commentResponseDto = new CommentResponseDto(comment);

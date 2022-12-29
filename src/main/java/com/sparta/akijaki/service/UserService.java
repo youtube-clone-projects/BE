@@ -8,6 +8,7 @@ import com.sparta.akijaki.jwt.JwtUtil;
 import com.sparta.akijaki.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.Authentication;
@@ -57,7 +58,7 @@ public class UserService {
 
     //로그인
     @Transactional(readOnly = true)
-    public CompleteResponseDto login(LoginRequestDto loginRequestDto, HttpServletResponse httpServletResponse) {
+    public LoginResponseDto login(LoginRequestDto loginRequestDto, HttpServletResponse httpServletResponse) {
         //사용자 확인
         User user = userRepository.findByUsername(loginRequestDto.getUsername()).orElseThrow(
                 () -> new IllegalArgumentException("회원을 찾을 수 없습니다.")
@@ -79,7 +80,7 @@ public class UserService {
         httpServletResponse.addHeader(
                 JwtUtil.AUTHORIZATION_HEADER, jwtUtil.createToken(authentication));
 
-        return new CompleteResponseDto("님 환영합니다!");
+        return new LoginResponseDto("환영합니다", HttpStatus.OK.value(), user.getUsername());
     }
 
     //회원탈퇴
