@@ -18,6 +18,7 @@
 
 ##  📍 기술스택
 💚 BE
+
 ![자바](https://user-images.githubusercontent.com/108880977/209832693-f5ac7691-2f22-43bd-aeb5-c74f05a974bb.svg)
 ![JWT](https://user-images.githubusercontent.com/108880977/209832739-719a3618-4a62-4e8d-9407-e48d51016b45.svg)
 ![스프링부트](https://user-images.githubusercontent.com/108880977/209832761-ba78a41b-6c0f-49cb-ba64-91d9f61fc354.svg)
@@ -26,6 +27,12 @@
 ![GRADLE](https://user-images.githubusercontent.com/108880977/209832801-870a1c91-7dd8-4661-8cec-2aecce9e1ae8.svg)
 ![JPA](https://user-images.githubusercontent.com/108880977/209832891-4f4f7606-fbc5-4303-b241-af96df9c6cb7.svg)
 ![EC22](https://user-images.githubusercontent.com/108880977/209832898-2b0f5df0-7dc4-468a-a5ca-3f94fa994355.svg)
+![피그마](https://user-images.githubusercontent.com/108880977/209934245-b233bf48-e2e7-4fa0-ace9-b32dfc2f22cb.svg)
+![포스트만](https://user-images.githubusercontent.com/108880977/209934261-5e3b0c1a-f09f-4e8c-b3d2-8600ed90a127.svg)
+![깃허브](https://user-images.githubusercontent.com/108880977/209934273-5a2dbacb-2272-4240-89cd-fa4d18855915.svg)
+![rlt](https://user-images.githubusercontent.com/108880977/209934284-8d85d9d4-8ef8-4cab-9d79-576c397a48bf.svg)
+
+
 
  💚 FE github 가기 https://github.com/youtube-clone-projects/FE 
 
